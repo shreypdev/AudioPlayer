@@ -1,6 +1,22 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# React Native Audio Player
 
-# Getting Started
+A feature-rich audio player application built with React Native that allows users to explore music, manage favorites, and control playback across both iOS and Android platforms.
+
+## Features
+
+- 🎵 Audio playback with essential controls (play, pause, next, previous, seek)
+- 📱 Cross-platform compatibility (iOS & Android)
+- 📑 Multiple views (Explore, Favorites, Player)
+- ❤️ Favorite tracks management with persistent storage
+- 🎯 Real-time track progress and duration display
+- 📋 Music discovery through TheAudioDB API
+- 🔄 Background audio playback support
+- 👆 Interactive gesture controls:
+  - Swipe left/right to change tracks
+  - Swipe up/down to manage volume
+  - Double tap to favorite/unfavorite
+
+## Getting Started
 
 > **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
 
@@ -62,11 +78,11 @@ If everything is set up correctly, you should see your new app running in the An
 
 This is one way to run your app — you can also build it directly from Android Studio or Xcode.
 
-## Step 3: Modify your app
+## Step 3: Modify app
 
 Now that you have successfully run the app, let's make changes!
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
 
 When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
 
@@ -77,21 +93,30 @@ When you want to forcefully reload, for example to reset the state of your app, 
 
 You've successfully run and modified your React Native App. :partying_face:
 
-### Now what?
+## Key Technical Challenges
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+### Gesture Implementation
+- Implemented swipe gestures for track management using React Native Gesture Handler
+- Added smooth animations for swipe-to-favorite functionality
+- Created intuitive gesture feedback with haptics and visual cues
 
-# Troubleshooting
+### TrackPlayer Integration
+- Set up background playback capabilities
+- Managed complex audio states and transitions
+- Implemented queue management for seamless playback
+- Handled audio interruptions (calls, notifications)
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+### Key Architecture Decisions
+- Added wp/hp util to handle responsive design
+- Centralized state management using Context API for player controls
+- Implemented custom hooks for audio player functionality
+- Used TypeScript for enhanced type safety and development experience
+- Modular component architecture for better maintainability
+- Efficient caching strategy for audio files and metadata
 
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+## Improvement Scope
+Limited myself to 6 hours, so there are a few things that can be improved:
+- Infinite scroll for the explore view
+- Swipe down gesture to close the mini player
+- Handle tap on seeker to skip to that time, right now you have to swipe seeker
+- design poslishing is required on android (shadows)
