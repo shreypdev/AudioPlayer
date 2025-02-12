@@ -2,6 +2,11 @@
 
 A feature-rich audio player application built with React Native that allows users to explore music, manage favorites, and control playback across both iOS and Android platforms.
 
+<p float="left">
+  <img src="https://github.com/user-attachments/assets/754e752b-8a4a-46a9-a90d-58536ae01c42" width="200" alt="Explore Screen" />
+  <img src="https://github.com/user-attachments/assets/9a6af3d8-6a5c-4c8d-855d-ed7a870da1bf" width="200" alt="Player Screen" />
+</p>
+
 ## Features
 
 - 🎵 Audio playback with essential controls (play, pause, next, previous, seek)
